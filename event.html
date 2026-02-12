@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Event Details</h1>
+</header>
+
+<main class="event-container">
+
+    <div id="eventDetails"></div>
+
+    <h2>RSVP</h2>
+
+    <form id="rsvpForm" novalidate>
+        <label>
+            Name
+            <input type="text" id="name" required>
+        </label>
+
+        <label>
+            Email
+            <input type="email" id="email" required>
+        </label>
+
+        <label>
+            Guests
+            <input type="number" id="guests" min="0" value="0">
+        </label>
+
+        <button type="submit">Submit RSVP</button>
+
+        <p id="formMessage" aria-live="polite"></p>
+    </form>
+
+</main>
+
+<script type="module" src="js/eventPage.js"></script>
+
+</body>
+</html>
