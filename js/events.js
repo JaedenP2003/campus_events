@@ -1,5 +1,5 @@
 export async function getEvents() {
-    const res = await fetch("./data/events.json");
+    const res = await fetch("data/events.json");
 
     if (!res.ok) {
         throw new Error("Could not load events.");
