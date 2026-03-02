@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Details</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Details</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
-
 <body>
 
-<header>
-    <h1>Event Details</h1>
+<header class="main-header">
+  <nav class="nav">
+    <a href="index.html" class="logo">CampusEvents</a>
+
+    <button class="nav-toggle">☰</button>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="calendar.html">Calendar</a></li>
+    </ul>
+
+    <button id="themeToggle" class="theme-toggle">🌙</button>
+  </nav>
 </header>
 
 <main class="event-container">
+  <div id="eventDetails"></div>
 
-    <div id="eventDetails"></div>
+  <h2>RSVP</h2>
 
-    <h2>RSVP</h2>
+  <form id="rsvpForm" novalidate>
+    <label>Name
+      <input type="text" id="name" required>
+    </label>
 
-    <form id="rsvpForm" novalidate>
-        <label>
-            Name
-            <input type="text" id="name" required>
-        </label>
+    <label>Email
+      <input type="email" id="email" required>
+    </label>
 
-        <label>
-            Email
-            <input type="email" id="email" required>
-        </label>
+    <label>Guests
+      <input type="number" id="guests" min="0" value="0">
+    </label>
 
-        <label>
-            Guests
-            <input type="number" id="guests" min="0" value="0">
-        </label>
-
-        <button type="submit">Submit RSVP</button>
-
-        <p id="formMessage" aria-live="polite"></p>
-    </form>
-
+    <button type="submit">Submit RSVP</button>
+    <p id="formMessage"></p>
+  </form>
 </main>
 
+<script type="module" src="js/navbar.js"></script>
 <script type="module" src="js/eventPage.js"></script>
-
 </body>
 </html>

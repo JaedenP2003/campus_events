@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Events</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calendar</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
-
 <body>
 
-<header>
-    <h1>Campus Events Calendar</h1>
+<header class="main-header">
+  <nav class="nav">
+    <a href="index.html" class="logo">CampusEvents</a>
+
+    <button class="nav-toggle">☰</button>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="calendar.html">Calendar</a></li>
+    </ul>
+
+    <button id="themeToggle" class="theme-toggle">🌙</button>
+  </nav>
 </header>
-<!--Test comment here-->
-<main>
-    <section class="calendar-container">
-        <div id="calendar"></div>
-    </section>
+
+<main class="calendar-container">
+  <div id="calendar"></div>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+<script type="module" src="js/navbar.js"></script>
 <script type="module" src="js/calendar.js"></script>
-
 </body>
 </html>

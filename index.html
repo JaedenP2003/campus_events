@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Events Hub</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Events</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
-
 <body>
 
 <header class="main-header">
-    <nav class="nav">
-        <h1 class="logo">CampusEvents</h1>
+  <nav class="nav">
+    <a href="index.html" class="logo">CampusEvents</a>
 
-        <ul class="nav-links">
-            <li><a href="calendar.html">Calendar</a></li>
-        </ul>
-    </nav>
+    <button class="nav-toggle" aria-label="Toggle Navigation">☰</button>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="calendar.html">Calendar</a></li>
+    </ul>
+
+    <button id="themeToggle" class="theme-toggle">🌙</button>
+  </nav>
 </header>
 
 <main>
@@ -57,7 +61,9 @@
 </section>
 
 </main>
-
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+<script type="module" src="js/navbar.js"></script>
+<script type="module" src="js/calendar.js"></script>
 <footer>
     <p>© 2026 CampusEvents</p>
 </footer>
