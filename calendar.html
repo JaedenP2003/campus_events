@@ -25,6 +25,45 @@
   </nav>
 </header>
 
+<section class="add-event">
+
+  <h2>Add Event</h2>
+
+    <form id="eventForm">
+
+    <label>
+    Event Title
+    <input type="text" id="title" required>
+    </label>
+
+    <label>
+    Location
+    <input type="text" id="location" required>
+    </label>
+
+    <label>
+    Start Time
+    <input type="datetime-local" id="start" required>
+    </label>
+
+    <label>
+    End Time
+    <input type="datetime-local" id="end">
+    </label>
+
+    <label>
+    Description
+    <textarea id="description"></textarea>
+    </label>
+
+    <button type="submit">Add Event</button>
+
+    <p id="eventMessage"></p>
+
+    </form>
+
+</section>
+
 <main class="calendar-container">
   <div id="calendar"></div>
 </main>
