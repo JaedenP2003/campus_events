@@ -1,14 +1,17 @@
 export async function getEvents() {
-    const res = await fetch("data/events.json");
+  const response = await fetch("./data/events.json");
 
-    if (!res.ok) {
-        throw new Error("Could not load events.");
-    }
+  if (!response.ok) {
+    throw new Error("Failed to load events.");
+  }
 
-    return await res.json();
+  const jsonEvents = await response.json();
+  const userEvents = JSON.parse(localStorage.getItem("userEvents")) || [];
+
+  return [...jsonEvents, ...userEvents];
 }
 
 export async function getEventById(id) {
-    const events = await getEvents();
-    return events.find(e => e.id === id);
+  const events = await getEvents();
+  return events.find((event) => event.id === id);
 }

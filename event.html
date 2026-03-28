@@ -7,46 +7,80 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" class="site-logo">Campus Events</a>
 
-<header class="main-header">
-  <nav class="nav">
-    <a href="index.html" class="logo">CampusEvents</a>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">
+          🌙
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+          ☰
+        </button>
+      </div>
 
-    <button class="nav-toggle">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-page="home">Home</a></li>
+        <li><a href="calendar.html" data-page="calendar">Calendar</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="calendar.html">Calendar</a></li>
-    </ul>
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-content">
+        <p class="eyebrow">Event Information</p>
+        <h1>Event Details</h1>
+        <p>
+          Review event information and submit your RSVP below.
+        </p>
+      </div>
+    </section>
 
-    <button id="themeToggle" class="theme-toggle">🌙</button>
-  </nav>
-</header>
+    <section class="content-section">
+      <div class="event-layout">
+        <section class="event-container">
+          <div class="panel-heading">
+            <h2>About This Event</h2>
+            <p>Details will appear below when an event is selected.</p>
+          </div>
 
-<main class="event-container">
-  <div id="eventDetails"></div>
+          <div id="eventDetails" class="event-summary-card">
+            <p>Loading event details...</p>
+          </div>
+        </section>
 
-  <h2>RSVP</h2>
+        <aside class="panel">
+          <div class="panel-heading">
+            <h2>RSVP</h2>
+            <p>Save your response so it is ready when you return.</p>
+          </div>
 
-  <form id="rsvpForm" novalidate>
-    <label>Name
-      <input type="text" id="name" required>
-    </label>
+          <form id="rsvpForm" novalidate>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
 
-    <label>Email
-      <input type="email" id="email" required>
-    </label>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
 
-    <label>Guests
-      <input type="number" id="guests" min="0" value="0">
-    </label>
+            <label for="guests">Guests</label>
+            <input type="number" id="guests" name="guests" min="0" value="0" />
 
-    <button type="submit">Submit RSVP</button>
-    <p id="formMessage"></p>
-  </form>
-</main>
+            <button type="submit" class="button">Submit RSVP</button>
 
-<script type="module" src="js/navbar.js"></script>
-<script type="module" src="js/eventPage.js"></script>
+            <p id="formMessage" class="message" aria-live="polite"></p>
+          </form>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Campus Events</p>
+  </footer>
+
+  <script type="module" src="js/navbar.js"></script>
+  <script type="module" src="js/eventPage.js"></script>
 </body>
 </html>

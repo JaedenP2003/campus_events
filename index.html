@@ -7,66 +7,93 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" class="site-logo">Campus Events</a>
 
-<header class="main-header">
-  <nav class="nav">
-    <a href="index.html" class="logo">CampusEvents</a>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">
+          🌙
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+          ☰
+        </button>
+      </div>
 
-    <button class="nav-toggle" aria-label="Toggle Navigation">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-page="home">Home</a></li>
+        <li><a href="calendar.html" data-page="calendar">Calendar</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="calendar.html">Calendar</a></li>
-    </ul>
-
-    <button id="themeToggle" class="theme-toggle">🌙</button>
-  </nav>
-</header>
-
-<main>
-
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-content">
-        <h2>Discover What’s Happening On Campus</h2>
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-content">
+        <p class="eyebrow">Student Life</p>
+        <h1>Discover Campus Events</h1>
         <p>
-            Find events, RSVP instantly, and never miss out on what matters.
+          Stay connected with activities, academic events, social gatherings, and campus opportunities all in one place.
         </p>
+        <div class="hero-actions">
+          <a href="calendar.html" class="button button-light">View Calendar</a>
+        </div>
+      </div>
+    </section>
 
-        <a href="calendar.html" class="cta-button">
-            View Event Calendar
-        </a>
-    </div>
-</section>
+    <section class="content-section">
+      <div class="section-heading">
+        <h2>Why use Campus Events?</h2>
+        <p>
+          A cleaner way to browse upcoming activities, save your spot, and stay informed.
+        </p>
+      </div>
 
+      <div class="card-grid">
+        <article class="info-card">
+          <h3>Simple Navigation</h3>
+          <p>
+            Move between pages quickly with a clear, consistent navigation bar across the site.
+          </p>
+        </article>
 
-<!-- FEATURES -->
-<section class="features">
+        <article class="info-card">
+          <h3>Fast Event Access</h3>
+          <p>
+            Open event details straight from the calendar and view important information without hunting for it.
+          </p>
+        </article>
 
-    <div class="feature-card">
-        <h3>📅 Smart Calendar</h3>
-        <p>Browse events in a clean, interactive monthly view.</p>
-    </div>
+        <article class="info-card">
+          <h3>Easy RSVP</h3>
+          <p>
+            Save your RSVP information locally so returning to the event page feels faster and smoother.
+          </p>
+        </article>
+      </div>
+    </section>
 
-    <div class="feature-card">
-        <h3>✅ Easy RSVP</h3>
-        <p>Reserve your spot in seconds with saved preferences.</p>
-    </div>
+    <section class="content-section content-section-alt">
+      <div class="split-callout">
+        <div>
+          <p class="eyebrow text-primary">Start Here</p>
+          <h2>Ready to see what’s happening?</h2>
+          <p>
+            Browse the full calendar, open event details, and begin building a better campus experience.
+          </p>
+        </div>
 
-    <div class="feature-card">
-        <h3>📍 Stay Connected</h3>
-        <p>Know where to be and when — no confusion.</p>
-    </div>
+        <div class="split-callout-actions">
+          <a href="calendar.html" class="button">Open Calendar</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-</section>
+  <footer class="site-footer">
+    <p>&copy; 2026 Campus Events</p>
+  </footer>
 
-</main>
-<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
-<script type="module" src="js/navbar.js"></script>
-<script type="module" src="js/calendar.js"></script>
-<footer>
-    <p>© 2026 CampusEvents</p>
-</footer>
-
+  <script type="module" src="js/navbar.js"></script>
 </body>
 </html>
