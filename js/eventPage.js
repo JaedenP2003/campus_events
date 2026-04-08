@@ -28,24 +28,30 @@ document.addEventListener("DOMContentLoaded", async () => {
     guests.value = existing.guests;
   }
 
+  const rsvpForm = document.getElementById("rsvpForm");
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const guestsInput = document.getElementById("guests");
+  const formMessage = document.getElementById("formMessage");
+
   rsvpForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const error = validateForm(name.value, email.value);
+    const error = validateForm(nameInput.value, emailInput.value);
 
     if (error) {
       formMessage.textContent = error;
-      formMessage.style.color = "red";
+      formMessage.className = "message error";
       return;
     }
 
     saveRSVP(id, {
-      name: name.value,
-      email: email.value,
-      guests: guests.value
+      name: nameInput.value.trim(),
+      email: emailInput.value.trim(),
+      guests: guestsInput.value
     });
 
-    formMessage.textContent = "RSVP saved!";
-    formMessage.style.color = "green";
+    formMessage.textContent = "RSVP successful! You're all set.";
+    formMessage.className = "message success";
   });
 });

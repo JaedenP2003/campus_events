@@ -1,14 +1,13 @@
 export function validateForm(name, email) {
+  if (!name || !name.trim()) {
+    return "Name is required.";
+  }
 
-    if (!name.trim()) {
-        return "Name is required.";
-    }
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!email || !emailPattern.test(email.trim())) {
+    return "Enter a valid email.";
+  }
 
-    if (!emailPattern.test(email)) {
-        return "Enter a valid email.";
-    }
-
-    return null;
+  return null;
 }
